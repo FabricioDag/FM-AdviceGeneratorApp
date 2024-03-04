@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --advice-box:hsl(217, 19%, 24%);
+    --bg:hsl(218, 23%, 16%);
+    --text:hsl(193, 38%, 86%);
+    --green:hsl(150, 100%, 66%);
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    background-color: var(--bg);
+    font-family: 'Manrope', sans-serif;
+    padding: 2rem;
+}
+
+.container{
+    background-color: var(--advice-box);
+    padding: 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    color: var(--text);
+    max-width: 450px;
+    position: relative;
+}
+
+.adviceID{
+    color: var(--green);
+    font-weight: normal;
+    letter-spacing: .2rem;
+    animation-name: scale;
+    animation-duration: .3s;
+}
+
+.advice{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 1rem 0;
+}
+
+.content img{
+    margin-bottom: 2rem;
+}
+
+.random{
+    position: absolute;
+    bottom:-2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.random:hover{
+    filter: drop-shadow(0 0 0.75rem var(--green));
+}
+
+
+@keyframes shake {
+    0%{
+        transform: rotate(50%);
+    }
+    25%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-65%);
+    }
+    75%{
+        transform: rotate(22%)
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
